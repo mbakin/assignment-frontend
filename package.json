@@ -14,7 +14,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test:unit": "react-scripts test __tests__/unit/*.js",
+    "test:integration": "react-scripts test __tests__/integration/*.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
