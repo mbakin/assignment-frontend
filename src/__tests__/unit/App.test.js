@@ -18,8 +18,6 @@ describe('App components render elements on screen', () => {
     expect(yourTasksText).toBeInTheDocument()
   });
 
-
-
   test("renders TodoAdd's element", () => {
     render(<App />)
     const queryByTestId = screen.getByTestId("taskInput")
