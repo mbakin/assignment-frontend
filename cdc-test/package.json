@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:consumer": "mocha consumer.js --timeout 20000"
+    "test:consumer": "mocha consumer.js --timeout 20000",
+    "test:provider" :"node provider.tests.js"
   },
   "keywords": [],
   "author": "",
