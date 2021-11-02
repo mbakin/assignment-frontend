@@ -1,0 +1,61 @@
+{
+  "consumer": {
+    "name": "frontend"
+  },
+  "provider": {
+    "name": "backend"
+  },
+  "interactions": [
+    {
+      "description": "a request for all the todo items",
+      "providerState": "A list of todos with one todo item",
+      "request": {
+        "method": "GET",
+        "path": "/api/todos",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "title": "Buy some milk",
+            "complete": false,
+            "_id": "6181955862fe4563597abcfc",
+            "createdAt": "2021-11-02T19:45:28.727Z",
+            "updatedAt": "2021-11-02T19:45:28.727Z",
+            "__v": 0
+          }
+        ]
+      }
+    },
+    {
+      "description": "a request to add a new todo item",
+      "providerState": "A new todo item is added",
+      "request": {
+        "method": "POST",
+        "path": "/api/todos",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "text": "Buy some milk"
+        }
+      },
+      "response": {
+        "status": 202,
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
