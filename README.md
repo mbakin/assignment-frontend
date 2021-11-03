@@ -27,15 +27,43 @@ gh repo clone mbakin/modanisa-frontend
 cd modanisa-frontend
 npm install
 ```
-Aviable test scripts:
+**Aviable test scripts:**
+
+```
+"test" : "npm run test:unit && npm run test:integration ",
+"test:unit": "react-scripts test __tests__/unit/*.js",
+"test:integration": "react-scripts test __tests__/integration/*.js",
+```
 
 `npm run test` & `npm run test:unit` & `npm run test:integration` 
 
 <img src="https://user-images.githubusercontent.com/68995469/140024401-3aaca7d5-2641-45c0-9bd2-c39ae971b7d7.gif" height="350">
 
-You can start [localhost:3000](localhost:3000)
+**You can start [localhost:3000](localhost:3000)**
 
 `npm start`
+
+**CDC test scripts:**
+If you want to test CDC, you must go to this file directory
+
+```bash
+cd modanisa-frontend
+cd modanisa-frontend/cdc-test/
+npm install
+```
+Aviable scripts for CDC:
+```
+"scripts": {
+"test:consumer": "mocha consumer.js --timeout 20000",
+"test:provider" :"node provider.tests.js"
+},
+```
+You can run `npm run test:consumer` & `npm run test:provider`
+
+
+
+
+
 
 
 
