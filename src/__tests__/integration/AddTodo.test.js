@@ -32,5 +32,4 @@ describe("if click 'Create Task' button", () => {
       expect(handleAddTodo).not.toHaveBeenCalled()
     })
   });
-  
 });

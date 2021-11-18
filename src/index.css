@@ -57,11 +57,36 @@ body{
   color: var(--secondary);
   padding:16px 16px 16px 30px ;
 }
+.todo .checkbox {
+	width: 20px;
+	height: 20px;
+	margin-right: 16px;
+	border-radius: 50%;
+	background-color: var(--dark-alt);
+	background-image: linear-gradient(to bottom, transparent, transparent);
+	transition: 0.4s;
+}
+
+/* .todo.is-complete .checkbox {
+	background-color: white;
+} */
+input .checkbox:checked {
+	content: "✔";
+	font-size: 20px;
+	position: absolute;
+	text-decoration: line-through;
+}
+.todo.is-complete .text{
+	text-decoration: line-through;
+}
 .todo li{
 	list-style: none;
 }
 .text{
   font-size: 22px;
+}
+.todo.is-complete .text:disabled{
+	text-decoration: line-through rgba(209, 208, 207, 0.808);
 }
 .todo .delete-todo {
 	position: absolute;
